@@ -8,16 +8,19 @@
 
 body {
   max-width: 1440px;
-	min-width: 450px;
+  min-width: 450px;
   background: rgba(24, 24, 24, 0.561);
   margin: 0 auto;
   background: #0e1014;
 }
 .wrapper {
-	position: relative;
+  position: relative;
   padding: 57px 150px;
   @include before('xl') {
     padding: 0px;
+  }
+	@include before('sm') {
+		overflow: hidden;
   }
 }
 
@@ -27,6 +30,11 @@ body {
   height: 311px;
   left: -12%;
   top: 24%;
+
+  @include before('sm') {
+    left: -83%;
+    top: 33%;
+  }
 
   background: #961a1a;
   opacity: 0.5;
@@ -38,6 +46,13 @@ body {
   height: 100;
   left: 59%;
   top: 0%;
+  @include before('sm') {
+    width: 100px;
+    height: 100;
+    left: 82%;
+    top: 28%;
+    transform: rotate(90deg);
+  }
 }
 
 .purple_light {
@@ -49,6 +64,11 @@ body {
   background: #833ab4;
   opacity: 0.5;
   filter: blur(196px);
+  @include before('sm') {
+		width: 100%;
+    left: 96%;
+    top: 15%;
+  }
 }
 .red_ball {
   position: absolute;
@@ -56,11 +76,20 @@ body {
   height: 122px;
   left: 35%;
   top: 7%;
+  @include before('sm') {
+    display: none;
+  }
 }
 .red_ball-little {
-	position: absolute;
-	width: 50px;
-	height: 50px;
-	left: 59%;
-	top: 56%;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  left: 59%;
+  top: 56%;
+  @include before('sm') {
+    width: 120px;
+    height: 120px;
+    left: 3%;
+    top: 44%;
+  }
 }
