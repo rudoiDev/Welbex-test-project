@@ -1,0 +1,107 @@
+nav {
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  color: var(--color-white);
+	position: relative;
+	@include before('lg') {
+    background: #0E1014;
+  }
+	@include before('xl') {
+		padding: 25px;
+  }
+}
+.nav_container-about {
+  display: flex;
+  gap: 27px;
+  @include before('xl') {
+    justify-content: space-between;
+    width: 100%;
+  }
+	@include before('lg') {
+    justify-content: center;
+    width: 100%;
+  }
+}
+.nav_item-logo {
+  display: flex;
+  flex-direction: column;
+  @include before('lg') {
+    display: none;
+  }
+}
+.logo_welbex {
+  width: 140px;
+  height: 25px;
+}
+.logo {
+}
+.phone {
+}
+.logo_text {
+  font-family: 'Montserrat';
+  font-weight: 300;
+  width: 165px;
+  font-size: 10px;
+  line-height: 13px;
+  margin-top: 6px;
+}
+.about_item-container {
+  display: flex;
+  gap: 32px;
+	@include before('lg') {
+    gap: 28px;
+  }
+}
+.about_item {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 27px;
+	font-size: 16px;
+	// @include adaptive-value('font-size', 16, 12, 1);
+  a {
+    color: #e4e5ea;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+	&:last-child {
+		@include before('lg') {
+			display: none;
+		}
+	}
+	@include before('lg') {
+    text-transform: uppercase;
+  }
+}
+.nav_container-info {
+  display: inline-flex;
+  gap: 28px;
+  @include before('xl') {
+    display: none;
+  }
+}
+.info_item {
+  font-family: 'Inter';
+  height: 19px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: right;
+  &:first-child {
+    width: 143px;
+    margin-right: 18px;
+  }
+}
+.vector,
+.phone,
+.whatsapp {
+  width: 20px;
+  height: 15px;
+}
+.whatsapp {
+  width: 20px;
+  height: 20px;
+}

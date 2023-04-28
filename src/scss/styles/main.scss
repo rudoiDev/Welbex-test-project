@@ -1,0 +1,226 @@
+main {
+  position: relative;
+  z-index: 100;
+  margin-top: 94px;
+  display: flex;
+  justify-content: space-between;
+  color: #e4e5ea;
+  gap: 40px;
+  @include before('sm') {
+    justify-content: flex-start;
+  }
+  @include before('md') {
+    flex-wrap: wrap;
+    margin-top: 50px;
+    justify-content: center;
+  }
+  @include before('xl') {
+    padding: 20px;
+  }
+}
+.main_content {
+  @include before('md') {
+    width: 100%;
+  }
+}
+.main_text {
+  width: 362px;
+  height: 116px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  line-height: 60px;
+  font-size: 48px;
+  @include before('md') {
+    letter-spacing: 2.5px;
+  }
+  span {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    line-height: 57px;
+    background: linear-gradient(92deg, #fcb045 27.14%, #ff3f78 121.36%), #e4e5ea;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 47px;
+  }
+}
+.main_text-bottom {
+  width: 275px;
+  height: 44px;
+
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 87px;
+  @include before('sm') {
+    width: 100%;
+    margin-top: 90px;
+    line-height: 29px;
+    font-size: 26px;
+  }
+}
+.main_info {
+  display: flex;
+  flex-direction: column;
+	width: 30%;
+  @include before('md') {
+    width: 30%;
+  }
+  @include before('lg') {
+    width: 100%;
+    text-align: left;
+    margin-top: 0px;
+  }
+}
+.main_textBlock-first {
+  height: 44px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 21px;
+  line-height: 23px;
+  text-align: right;
+  margin-top: 13px;
+  @include before('md') {
+    line-height: 34px;
+    font-size: 24px;
+    text-align: left;
+  }
+  span {
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%),
+      linear-gradient(0deg, #e4e5ea, #e4e5ea);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+}
+.main_textBlock-middle {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-top: 40px;
+  gap: 30px;
+  @include before('md') {
+    justify-content: flex-start;
+  }
+  @include before('sm') {
+    display: none;
+  }
+}
+.middle_text {
+  flex: 0 0 43%;
+  @include before('sm') {
+    &:nth-child(3) {
+      order: 1;
+    }
+    line-height: 27px;
+    font-size: 24px;
+    text-align: left;
+  }
+}
+.middle_text {
+  @include before('sm') {
+    flex: 1 0 40%;
+  }
+}
+.middle_text:nth-child(2),
+.middle_text:nth-child(4) {
+  margin-left: -10px;
+}
+.middle_text:nth-child(3),
+.middle_text:nth-child(4) {
+  margin-top: 5px;
+}
+.middle_heading {
+  width: 102%;
+  height: 22px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 22px;
+  text-align: right;
+  text-transform: uppercase;
+  @include before('md') {
+    text-align: left;
+  }
+}
+.middle_description {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+  text-align: right;
+  margin-top: 3px;
+  @include before('md') {
+    text-align: left;
+  }
+  @include before('sm') {
+    display: none;
+  }
+}
+.main_btn {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  width: 262px;
+  height: 62px;
+  color: var(--color-white);
+  margin-top: 62px;
+  background: var(--color-blue);
+  align-self: end;
+  transition: background 0.3s ease-in-out;
+  @include before('sm') {
+    display: none;
+  }
+  @include before('md') {
+    align-self: center;
+  }
+  &:hover {
+    background: #3057b1;
+  }
+}
+
+.secret_content {
+  flex-wrap: wrap;
+  display: none;
+  gap: 31px 0px;
+  margin-top: 50px;
+  @include before('sm') {
+    display: flex;
+  }
+}
+.secret_item {
+  position: relative;
+  flex: 1 0 30%;
+  width: 99px;
+  height: 16px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #e4e5ea;
+  margin-left: 29px;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: -29px;
+    right: 0px;
+    bottom: 0px;
+    width: 15px;
+    height: 3px;
+    background: linear-gradient(90deg, #fcb045 36.99%, #fd1d1d 100%);
+  }
+}
