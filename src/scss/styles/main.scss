@@ -11,7 +11,8 @@ main {
   }
   @include before('md') {
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 48px;
+    padding: 12px !important;
     justify-content: center;
   }
   @include before('xl') {
@@ -54,7 +55,7 @@ main {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  margin-top: 87px;
+  margin-top: 93px;
   @include before('sm') {
     width: 100%;
     margin-top: 90px;
@@ -65,7 +66,7 @@ main {
 .main_info {
   display: flex;
   flex-direction: column;
-	width: 30%;
+  width: 30%;
   @include before('md') {
     width: 30%;
   }
@@ -84,6 +85,10 @@ main {
   line-height: 23px;
   text-align: right;
   margin-top: 13px;
+	@include before('sm') {
+		margin-top: 44px;
+		margin-left: 8px;
+  }
   @include before('md') {
     line-height: 34px;
     font-size: 24px;

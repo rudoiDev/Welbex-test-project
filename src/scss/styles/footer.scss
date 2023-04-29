@@ -31,7 +31,7 @@ footer {
     flex-wrap: wrap;
   }
   @include before('sm') {
-    gap: 70px 120px;
+    gap: 48px 54px;
   }
 }
 .footer_block {
@@ -43,28 +43,42 @@ footer {
     @include before('lg') {
       display: none;
     }
-		@include before('sm') {
-			display: flex;
+    @include before('sm') {
+      display: flex;
+      margin-top: 13px;
+      margin-left: -20px;
+    }
+  }
+  &--flex {
+    @include before('sm') {
+      flex: 0 0 175px !important;
     }
   }
   &:nth-child(1) {
     @include before('lg') {
       display: none;
     }
-		@include before('sm') {
-			display: flex;
+    @include before('sm') {
+      display: flex;
+      flex: 1 1 100%;
     }
   }
   &--current {
     align-items: end;
+    .footer_item {
+      @include before('sm') {
+        font-size: 23px;
+      }
+    }
     @include before('sm') {
-      margin-top: 30px;
+      margin-top: 50px;
       align-items: start;
     }
   }
   @include before('sm') {
-    gap: 15px;
-		flex: 1 0 40%;
+    gap: 18px;
+    flex: 1 0 36%;
+    margin-left: 0px;
   }
 }
 .footer_heading {
@@ -77,6 +91,7 @@ footer {
   @include before('sm') {
     width: 100%;
     font-size: 16px;
+    margin-bottom: 16px;
   }
 
   letter-spacing: 0.05em;
@@ -97,6 +112,26 @@ footer {
   font-size: 16px;
   line-height: 19px;
   color: #e4e5ea;
+
+  @include before('sm') {
+    &.order:nth-child(1) {
+      order: 2;
+			margin-top: 0px;
+    }
+    &.order:nth-child(2) {
+      order: 1;
+			margin-top: 38px;
+    }
+    &.order:nth-child(3) {
+      order: 3;
+    }
+    &.order:nth-child(4) {
+      order: 4;
+    }
+    &.order:nth-child(5) {
+      order: 5;
+    }
+  }
   a {
     width: 200px;
     height: 19px;
@@ -106,6 +141,9 @@ footer {
     font-size: 16px;
     line-height: 19px;
     color: #e4e5ea;
+    @include before('sm') {
+      font-size: 20px;
+    }
     &:hover {
       text-decoration: underline;
     }
@@ -115,6 +153,9 @@ footer {
   }
   &--current {
     margin-top: 6px;
+    @include before('sm') {
+      font-size: 20px !important;
+    }
   }
 }
 .footer_social-container {
@@ -124,6 +165,7 @@ footer {
   gap: 10px;
   margin-top: 11px;
   @include before('sm') {
+    margin-top: -4px;
     gap: 20px;
   }
 }
@@ -133,8 +175,9 @@ footer {
 .phone,
 .whatsapp {
   @include before('sm') {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
+    margin-bottom: -6px;
   }
 }
 .policy {
@@ -142,6 +185,7 @@ footer {
   text-align: right;
   @include before('sm') {
     text-align: left;
+    margin-top: 75px;
   }
   a {
     font-family: 'Montserrat';
@@ -151,7 +195,11 @@ footer {
     line-height: 15px;
     text-align: right;
     text-decoration-line: underline;
-		color: var(--color-white);
+    color: var(--color-white);
+    @include before('sm') {
+      font-size: 17px;
+      line-height: 44px;
+    }
   }
 }
 .policy_text {
@@ -164,5 +212,6 @@ footer {
   color: #e4e5ea;
   @include before('sm') {
     text-align: left;
+    font-size: 17px;
   }
 }
